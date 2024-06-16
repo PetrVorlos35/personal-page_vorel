@@ -1,16 +1,16 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import About from './About';
 import './App.css';
 
-function App() {
+function Home() {
   return (
-    <div className="App bg-gray-100 min-h-screen flex items-center justify-center">
+    <div className="App  min-h-screen flex flex-col items-center justify-center">
       <header className="App-header text-center">
         <h1 className="text-4xl font-bold text-blue-600">
           Vítejte na mé osobní stránce
         </h1>
-        <p className="text-lg text-gray-700 mt-4">
+        <p className="text-lg text-white mt-4">
           Toto je moje první stránka postavená pomocí Reactu a Tailwind CSS!
         </p>
         {/* Přidání tlačítka pro přesměrování na stránku O mně */}
@@ -20,8 +20,16 @@ function App() {
           </button>
         </Link>
       </header>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <div>
       {/* Definice tras */}
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </div>
