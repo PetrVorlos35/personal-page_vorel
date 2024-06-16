@@ -5,7 +5,7 @@ import './App.css';
 
 function Home() {
   return (
-    <div className="App  min-h-screen flex flex-col items-center justify-center">
+    <div className="App bg-gray-800 min-h-screen flex flex-col items-center justify-center">
       <header className="App-header text-center">
         <h1 className="text-4xl font-bold text-blue-600">
           Vítejte na mé osobní stránce
